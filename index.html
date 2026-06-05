@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgoTech - Agence Digitale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">IgoTech</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>IgoTech : Votre Partenaire Digital</h1>
+                <p>Créons ensemble votre présence en ligne.</p>
+                <a href="#projects" class="btn">Découvrir nos Projets</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Création de Sites Web</h3>
+                        <p>Design et développement de sites web modernes et performants.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Gestion Réseaux Sociaux</h3>
+                        <p>Stratégies et gestion de vos plateformes sociales pour engager votre audience.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Marketing Digital</h3>
+                        <p>Campagnes ciblées pour augmenter votre visibilité et vos conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Nos Réalisations</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+1" alt="Projet 1">
+                        <div class="project-overlay">
+                            <h3>Projet Client X</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+2" alt="Projet 2">
+                        <div class="project-overlay">
+                            <h3>Projet Client Y</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+3" alt="Projet 3">
+                        <div class="project-overlay">
+                            <h3>Projet Client Z</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Ce que nos Clients disent</h2>
+                <div class="testimonial-item">
+                    <p>"IgoTech a transformé notre présence en ligne. Un travail exceptionnel !"</p>
+                    <h4>Client Satisfait A</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Professionnalisme et créativité, nous recommandons vivement IgoTech."</p>
+                    <h4>Client Satisfait B</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>À propos de nous</h2>
+                <p>IgoTech est une agence digitale passionnée par la création de solutions web innovantes et efficaces. Notre équipe d'experts est dédiée à aider les entreprises à prospérer dans le monde numérique.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre Nom">
+                    <input type="email" placeholder="Votre Email">
+                    <input type="text" placeholder="Sujet">
+                    <textarea placeholder="Votre Message"></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <p>Email: contact@igotech.com</p>
+                    <p>Téléphone: +33 1 23 45 67 89</p>
+                    <p>Adresse: 123 Rue du Digital, 75001 Paris</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IgoTech. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JS for mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
