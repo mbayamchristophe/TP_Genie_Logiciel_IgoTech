@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- 
+    Projet : Portfolio Agence Digitale "IgoTech"
+    Cours : Génie Logiciel
+    Filière : Génie Informatique Niveau II
+    Description : Ce fichier contient la structure HTML sémantique du portfolio.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgoTech - Agence Digitale</title>
+    <!-- Lien vers la feuille de style externe pour le design et le responsive -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        SECTION : EN-TÊTE (HEADER)
+        Contient le logo de l'agence et la navigation principale.
+        Le menu est fixe en haut de page pour une navigation fluide.
+    -->
+    <header>
+        <div class="container">
+            <!-- Logo de l'agence cliquable pour revenir à l'accueil -->
+            <div class="logo">
+                <a href="#home">IgoTech</a>
+            </div>
+            <!-- Menu de navigation principal pour accéder aux différentes sections -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Bouton "hamburger" pour le menu mobile (affiché via CSS sur petits écrans) -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 
+            SECTION : ACCUEIL (HERO SECTION)
+            Première section visible par l'utilisateur, elle présente le slogan principal
+            et un appel à l'action pour découvrir les projets.
+        -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>IgoTech : Votre Partenaire Digital</h1>
+                <p>Créons ensemble votre présence en ligne.</p>
+                <!-- Bouton d'appel à l'action vers la section portfolio -->
+                <a href="#projects" class="btn">Découvrir nos Projets</a>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION : SERVICES
+            Présente les différentes prestations offertes par l'agence.
+            Utilise une grille pour une mise en page claire et organisée.
+        -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <div class="service-grid">
+                    <!-- Bloc Service 1 : Création de sites web -->
+                    <div class="service-item">
+                        <h3>Création de Sites Web</h3>
+                        <p>Design et développement de sites web modernes et performants.</p>
+                    </div>
+                    <!-- Bloc Service 2 : Gestion des réseaux sociaux -->
+                    <div class="service-item">
+                        <h3>Gestion Réseaux Sociaux</h3>
+                        <p>Stratégies et gestion de vos plateformes sociales pour engager votre audience.</p>
+                    </div>
+                    <!-- Bloc Service 3 : Marketing Digital -->
+                    <div class="service-item">
+                        <h3>Marketing Digital</h3>
+                        <p>Campagnes ciblées pour augmenter votre visibilité et vos conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION : PROJETS (PORTFOLIO)
+            Galerie des réalisations de l'agence.
+            Chaque projet possède une image et un overlay au survol pour plus d'interactivité.
+        -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Nos Réalisations</h2>
+                <div class="project-grid">
+                    <!-- Projet 1 -->
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+1" alt="Projet 1">
+                        <div class="project-overlay">
+                            <h3>Projet Client X</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+2" alt="Projet 2">
+                        <div class="project-overlay">
+                            <h3>Projet Client Y</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                    <!-- Projet 3 -->
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/300x200?text=Projet+3" alt="Projet 3">
+                        <div class="project-overlay">
+                            <h3>Projet Client Z</h3>
+                            <a href="#" class="view-project">Voir le projet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION : TÉMOIGNAGES
+            Affiche les avis des clients satisfaits pour renforcer la crédibilité.
+        -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Ce que nos Clients disent</h2>
+                <div class="testimonial-item">
+                    <p>"IgoTech a transformé notre présence en ligne. Un travail exceptionnel !"</p>
+                    <h4>Client Satisfait A</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Professionnalisme et créativité, nous recommandons vivement IgoTech."</p>
+                    <h4>Client Satisfait B</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION : À PROPOS
+            Présentation brève de l'agence et de sa philosophie.
+        -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>À propos de nous</h2>
+                <p>IgoTech est une agence digitale passionnée par la création de solutions web innovantes et efficaces. Notre équipe d'experts est dédiée à aider les entreprises à prospérer dans le monde numérique.</p>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION : CONTACT
+            Contient un formulaire de contact et les coordonnées de l'agence.
+            C'est l'objectif final du site pour faciliter la prise de contact.
+        -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <!-- Formulaire de contact pour les prospects -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre Nom" required>
+                    <input type="email" placeholder="Votre Email" required>
+                    <input type="text" placeholder="Sujet">
+                    <textarea placeholder="Votre Message" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                <!-- Coordonnées textuelles de l'agence -->
+                <div class="contact-info">
+                    <p>Email: contact@igotech.com</p>
+                    <p>Téléphone: +33 1 23 45 67 89</p>
+                    <p>Adresse: 123 Rue du Digital, 75001 Paris</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        SECTION : PIED DE PAGE (FOOTER)
+        Contient les informations de copyright et les liens vers les réseaux sociaux.
+    -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IgoTech. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script simple pour gérer le menu mobile sur petits écrans -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        // Bascule la classe 'active' pour afficher/masquer le menu mobile au clic
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
