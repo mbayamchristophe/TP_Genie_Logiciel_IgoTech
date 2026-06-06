@@ -1,0 +1,372 @@
+/* 
+    Projet : Portfolio Agence Digitale "IgoTech"
+    Description : Feuille de style CSS pour le design, la mise en page et le responsive design.
+    Structure : Styles Généraux -> Header -> Sections Spécifiques -> Footer -> Responsive Design.
+*/
+
+/* --- STYLES GÉNÉRAUX --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Conteneur principal pour centrer le contenu et limiter sa largeur */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Boutons génériques utilisés dans tout le site */
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+/* --- EN-TÊTE (HEADER) --- */
+header {
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky; /* L'en-tête reste visible lors du défilement */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 26px;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+/* Menu de navigation desktop */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Bouton hamburger pour le menu mobile (caché par défaut) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* --- SECTION D'ACCUEIL (HERO) --- */
+.hero {
+    /* Image de fond avec filtre pour rendre le texte lisible */
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
+                url('https://via.placeholder.com/1500x800?text=IgoTech+Digital+Agency') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* --- SECTION SERVICES --- */
+.services {
+    padding: 80px 0;
+    background: #f4f7f6;
+}
+
+/* Utilisation de CSS Grid pour une mise en page flexible des services */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Effet d'élévation au survol */
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* --- SECTION PROJETS (PORTFOLIO) --- */
+.projects {
+    padding: 80px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 3/2;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Overlay apparaissant au survol de l'image du projet */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 152, 219, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-overlay .view-project {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* --- SECTION TÉMOIGNAGES --- */
+.testimonials {
+    padding: 80px 0;
+    background: #f4f7f6;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+}
+
+.testimonial-item h4 {
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+/* --- SECTION CONTACT --- */
+.contact {
+    padding: 80px 0;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #3498db;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-info {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+/* --- PIED DE PAGE (FOOTER) --- */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #bdc3c7;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* --- RESPONSIVE DESIGN (Adaptation Mobile) --- */
+@media (max-width: 768px) {
+    /* Ajustement de la navigation pour mobile */
+    nav {
+        display: none; /* Caché par défaut, affiché via JS */
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Réduction des tailles de police sur mobile */
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Passage en une seule colonne pour les grilles */
+    .service-grid, .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
